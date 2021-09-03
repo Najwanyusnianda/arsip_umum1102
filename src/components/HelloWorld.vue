@@ -1,10 +1,11 @@
 <template>
-  <div class="bg-white relative overflow-hidden h-screen bg-gray-50">
+  <div class="bg-white relative overflow-hidden h-screen bg-gray-100">
 
-    <form class="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-items-center mx-auto mt-20">
+    <form
+      class="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-items-center mx-auto mt-20">
       <div class=" relative m-auto">
         <input v-model="search" type="text" id="&quot;form-subscribe-Subscribe"
-          class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+          class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
           placeholder="Cari Folder" />
       </div>
 
@@ -101,42 +102,52 @@
           </div>
         </div>
       </div>
+<button @click.prevent="resetFolders" class="bg-gray-300 hover:bg-gray-400 text-gray-800  py-1 px-6 rounded inline-flex items-center">
 
-      <button @click.prevent="resetFolders"
-        class="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-red-600 rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-red-200"
-        type="reset">
-        Reset
-      </button>
+  <span class="text-xs" > Reset</span>
+</button>
+
     </form>
 
     <br>
-<br>
-<br>
-  <div class="flex w-full justify-items-center ">
-    <div class="grid grid-cols-3 m-auto" v-if="search || kategori">
-      <div class="" v-for="folder in filteredFolders" :key="folder">
+    <br>
+    <br>
+    <div class="flex w-full justify-items-center ">
+
+      <div class="flex flex-wrap -m-2 p-5" v-if="search || kategori">
+        <div class="p-2 lg:w-1/4 md:w-1/2 w-full px-5 px-2 " v-for="folder in filteredFolders" :key="folder">
+          <div class="flex items-center  p-4 rounded-lg bg-white shadow-sm ">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
+            </svg>
 
 
-<div class="shadow-lg rounded-xl bg-white w-full md:w-64 p-6 bg-white dark:bg-gray-800 overflow-hidden m-2 mx-auto ">
-    <p class="text-gray-800 text-base">
-        {{ folder.name }}
-    </p>
+            <div class="flex-grow">
+              <a :href="folder.url" class="text-blue-500 text-lg font-bold"> {{ folder.name }}</a>
 
-    <div class="mt-4">
-        <button type="button" class="py-2 px-4  bg-blue-700 hover:bg-blue-800 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">
-            Buka
-        </button>
-    </div>
-</div>
+            </div>
+          </div>
+        </div>
 
       </div>
+      <div class="flex flex-wrap -m-2 p-5" v-else>
+        <div class="p-2 lg:w-1/4 md:w-1/2 w-full px-5 px-2 " v-for="folder in folders" :key="folder">
+          <div class="flex items-center  p-4 rounded-lg bg-white shadow-sm ">
 
-    </div>
-    <div class="" v-else>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
+            </svg>
 
-      {{ folders }}
+
+            <div class="flex-grow">
+              <a :href="folder.url" class="text-gray-700 text-lg font-semibold hover:text-blue-500"> {{ folder.name }}</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
 
 
@@ -158,68 +169,62 @@ export default {
       filtered_folder:'',
       folders:[{
         name:'LPJ',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1I0-ZNAX-hst9uWaucTexNLC0xRQDy4pr?usp=sharing',
         img:'',
         group:'bendahara'
       },{
         name:'SP2D',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1CrwoXLDFmS8HGKcro2dSCBQzeA8ZtHJG?usp=sharing',
         img:'',
         group:'bendahara'
       },{
         name:'SPJ',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1ql_ZhCbs7xrTlcHkLrRmN0wDgRnoOL1w?usp=sharing',
         img:'',
         group:'bendahara'
       },{
         name:'SPM',
-        url:'',
+        url:'https://drive.google.com/drive/folders/16olhI5JLwIYrtPZi2nPNsHpQqoSUOrFt?usp=sharing',
         img:'',
         group:'bendahara'
       },
       {
         name:'Renstra',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1wRXGWZjRpZEvSuDHCQCkdMPdl0VO4xfX?usp=sharing',
         img:'',
         group:'sakip'
       },{
         name:'IKU',
-        url:'',
+        url:'https://drive.google.com/drive/folders/14zq6lQdjm3yrBFuU4kIqTMG_70BQnz7i?usp=sharing',
         img:'',
         group:'sakip'
       },
             {
         name:'IKI',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1DmVE-25aeLoYF04iHa-vy7ouzFHhYB8b?usp=sharing',
         img:'',
         group:'sakip'
       },{
         name:'LKIN',
-        url:'',
-        img:'',
-        group:'sakip'
-      },
-      {
-        name:'LKIN',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1wRXGWZjRpZEvSuDHCQCkdMPdl0VO4xfX?usp=sharing',
         img:'',
         group:'sakip'
       },
             {
         name:'FRA',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1yMeqiiHC--TkGxVzl-k3zZ-c7dJ82QpE?usp=sharing',
         img:'',
         group:'sakip'
       },
             {
         name:'PK',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1BsoyNGonDE18U1f-WEg7jUcxDuA80viX?usp=sharing',
         img:'',
         group:'sakip'
       },
                   {
         name:'Laporan Keuangan',
-        url:'',
+        url:'https://drive.google.com/drive/folders/13zxUaJ0E9OZYm0QeKMsrRqA_TH8ld8b_?usp=sharing',
         img:'',
         group:'keuangan'
       },
@@ -231,37 +236,37 @@ export default {
       },
             {
         name:'SPD',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1pypBUl1vJ6EmQqOanQ_jG4Z6zrZkDabq?usp=sharing',
         img:'',
         group:'perjadin'
       },
                   {
         name:'Surat Tugas',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1GBDVNXOT5a8pLcIp8B5X1B6WXYgVgmAz?usp=sharing',
         img:'',
         group:'perjadin'
       },
                   {
         name:'Surat Masuk',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1Yz6SEN4hvucLqx943KOebdg_ZHqPuTHM?usp=sharing',
         img:'',
         group:'surat'
       },
                         {
         name:'Surat Keluar',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1t2GBZF4KFtTTeK5DOVFM9sk33RvorCyR?usp=sharing',
         img:'',
         group:'surat'
       },
                         {
         name:'Dokumen Lelang',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1mDFpD-hAyvL-MgHnKBQFfxpj0sezIdiZ?usp=sharing',
         img:'',
         group:'surat'
       },
                         {
         name:'Lainnya',
-        url:'',
+        url:'https://drive.google.com/drive/folders/1esA1XCIycdfXkDs23IiYxBNvR7QLi0rI?usp=sharing',
         img:'',
         group:'surat'
       },
@@ -332,7 +337,5 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
-}
+
 </style>
