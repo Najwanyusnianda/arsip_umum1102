@@ -124,7 +124,7 @@
 
 
             <div class="flex-grow">
-              <a :href="folder.url" target="_blank" class="text-blue-500 text-lg font-bold"> {{ folder.name }}</a>
+              <a :href="folder.url" target="_blank" class="text-gray-700 text-lg font-semibold hover:text-blue-500"> {{ folder.name }}</a>
 
             </div>
           </div>
