@@ -3,8 +3,13 @@
     <header class="w-full shadow-lg bg-white dark:bg-gray-700 items-center h-16 rounded-2xl z-40">
       <div class="relative z-20 flex flex-col justify-center h-full px-3 mx-auto flex-center">
         <div class="relative items-center pl-1 flex w-full lg:max-w-68 sm:pr-2 sm:ml-0">
-          <div class="container relative left-0 z-50 flex w-3/4 h-auto h-full">
-            <div class="relative flex items-center w-full lg:w-5/6 h-full group">
+          <div class="overflow-hidden container relative left-0 z-50 flex h-auto h-full hidden md:block sm:visible sm:w-2/12 ">
+            <div class="relative flex items-center">
+              <span class="text-xl font-mono font-bold mt-2"> Arsip Digital 1102</span>
+            </div>
+          </div>
+          <div class=" overflow-auto container relative left-0 z-50 flex w-7/12 sm:w-7/12 h-auto h-full mr-3 ">
+            <div class="ml-3 relative flex items-center w-full lg:w-5/6 h-full group">
               <div
                 class="absolute z-50 flex items-center justify-center block w-auto h-10 p-3 pr-2 text-sm text-gray-500 uppercase cursor-pointer sm:hidden">
                 <svg fill="none" class="relative w-5 h-5" stroke-linecap="round" stroke-linejoin="round"
@@ -23,13 +28,10 @@
               <input type="text" v-model="search"
                 class="block w-full py-1.5 pl-10 pr-4 leading-normal rounded-2xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 ring-opacity-90 bg-gray-100 dark:bg-gray-800 text-gray-400 aa-input"
                 placeholder="Search" />
-              <div
-                class="absolute right-0 hidden h-auto px-2 py-1 mr-2 text-xs text-gray-400 border border-gray-300 rounded-2xl md:block">
-                +
-              </div>
+
             </div>
           </div>
-          <div class="relative p-1 flex items-center justify-end w-1/4 ml-5 mr-4 sm:mr-0 sm:right-auto">
+          <div class="relative p-1 flex items-center justify-end w-3/12 ml-5 mr-4 sm:mr-0 sm:right-auto">
             <div class="relative inline-block text-left">
               <div>
                 <button type="button" @click="openKategori"
@@ -132,8 +134,8 @@
     <br>
     <div class="overflow-auto h-screen pb-24 pt-2 pr-2 pl-2 md:pt-0 md:pr-0 md:pl-0">
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 my-4">
-        <div class="w-full " v-for="item in filteredFolders" :key="item.name" >
-          <div class="shadow-lg px-4 py-6 w-full bg-white dark:bg-gray-700 relative">
+        <div class="w-full  " v-for="item in filteredFolders" :key="item.name" >
+          <div class=" mx-3 -ml-1 shadow-lg px-4 py-6 w-full bg-white rounded-md dark:bg-gray-700 relative cursor-pointer font-mono hover:bg-blue-500 hover:text-white" @click="redirectLink(item.url)" >
             {{item.name}}
           </div>
         </div>
@@ -307,6 +309,9 @@
         this.kategori = '',
           this.active = false,
           this.search = null
+      },
+      redirectLink(url){
+         window.open(url, "_blank"); 
       }
 
     }
