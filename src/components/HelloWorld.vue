@@ -160,12 +160,12 @@
         search: '',
         filtered_folder: '',
         folders: [{supername:'LPJ',
-            name: 'LPJ',
+            name: 'lpj,laporan',
             url: 'https://drive.google.com/drive/folders/1I0-ZNAX-hst9uWaucTexNLC0xRQDy4pr?usp=sharing',
             img: '',
             group: 'bendahara'
           }, {supername:'SP2D',
-            name: 'SP2D',
+            name: 'sp2d,pencairan,dana',
             url: 'https://drive.google.com/drive/folders/1CrwoXLDFmS8HGKcro2dSCBQzeA8ZtHJG?usp=sharing',
             img: '',
             group: 'bendahara'
@@ -175,7 +175,7 @@
             img: '',
             group: 'bendahara'
           }, {supername:'SPM',
-            name: 'SPM',
+            name: 'surat,perintah,membayar',
             url: 'https://drive.google.com/drive/folders/16olhI5JLwIYrtPZi2nPNsHpQqoSUOrFt?usp=sharing',
             img: '',
             group: 'bendahara'
@@ -233,7 +233,7 @@
             group: 'perjadin'
           },
           {supername:'Surat Tugas',
-            name: 'Surat, tugas, ST, perjalanan, hari, tempat, acara',
+            name: 'surat, tugas, st, perjalanan, hari, tempat, acara',
             url: 'https://drive.google.com/drive/folders/1GBDVNXOT5a8pLcIp8B5X1B6WXYgVgmAz?usp=sharing',
             img: '',
             group: 'perjadin'
@@ -263,13 +263,13 @@
             group: 'surat'
           },
           {supername:'SOP',
-            name: 'SOP',
+            name: 'standar operasional prosedur',
             url: 'https://drive.google.com/drive/folders/1YQEVQXGwGoi-fAGbjSHPThSv5J92bdaU?usp=sharing',
             img: '',
             group: 'sop'
           },
           {supername:'Data Pegawai',
-            name: 'Data Pegawai',
+            name: 'data,pegawai',
             url: 'https://drive.google.com/drive/folders/1O4pbyjR-FTGEh6g491cPgzTOkYXUS1T0?usp=sharing',
             img: '',
             group: 'kepegawaian'
