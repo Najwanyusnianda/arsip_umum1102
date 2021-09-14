@@ -136,7 +136,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 my-4">
         <div class="w-full  " v-for="item in filteredFolders" :key="item.name" >
           <div class=" mx-3 -ml-1 shadow-lg px-4 py-6 w-full bg-white rounded-md dark:bg-gray-700 relative cursor-pointer font-mono hover:bg-blue-500 hover:text-white" @click="redirectLink(item.url)" >
-            {{item.name}}
+            {{item.supername}}
           </div>
         </div>
       </div>
@@ -159,118 +159,118 @@
         active: false,
         search: '',
         filtered_folder: '',
-        folders: [{
+        folders: [{supername:'LPJ',
             name: 'LPJ',
             url: 'https://drive.google.com/drive/folders/1I0-ZNAX-hst9uWaucTexNLC0xRQDy4pr?usp=sharing',
             img: '',
             group: 'bendahara'
-          }, {
+          }, {supername:'SP2D',
             name: 'SP2D',
             url: 'https://drive.google.com/drive/folders/1CrwoXLDFmS8HGKcro2dSCBQzeA8ZtHJG?usp=sharing',
             img: '',
             group: 'bendahara'
-          }, {
-            name: 'SPJ',
+          }, {supername:'SPJ',
+            name: 'pertanggungjawaban, surat, keuangan, kwitansi',
             url: 'https://drive.google.com/drive/folders/1ql_ZhCbs7xrTlcHkLrRmN0wDgRnoOL1w?usp=sharing',
             img: '',
             group: 'bendahara'
-          }, {
+          }, {supername:'SPM',
             name: 'SPM',
             url: 'https://drive.google.com/drive/folders/16olhI5JLwIYrtPZi2nPNsHpQqoSUOrFt?usp=sharing',
             img: '',
             group: 'bendahara'
           },
-          {
-            name: 'Renstra',
+          {supername:'Renstra',
+            name: 'reviu, notulensi, daftar, hadir, skp, ckp, pembahasan, 2021, 2020, 2024, monitoring, triwulan',
             url: 'https://drive.google.com/drive/folders/1wRXGWZjRpZEvSuDHCQCkdMPdl0VO4xfX?usp=sharing',
             img: '',
             group: 'sakip'
-          }, {
-            name: 'IKU',
+          }, {supername:'IKU',
+            name: 'indikator, kinerja, utama, tahun',
             url: 'https://drive.google.com/drive/folders/14zq6lQdjm3yrBFuU4kIqTMG_70BQnz7i?usp=sharing',
             img: '',
             group: 'sakip'
           },
-          {
-            name: 'IKI',
+          {supername:'IKI',
+            name: 'indikator, kinerja, individu',
             url: 'https://drive.google.com/drive/folders/1DmVE-25aeLoYF04iHa-vy7ouzFHhYB8b?usp=sharing',
             img: '',
             group: 'sakip'
-          }, {
+          }, {supername:'LKIN',
             name: 'LKIN',
             url: 'https://drive.google.com/drive/folders/1wRXGWZjRpZEvSuDHCQCkdMPdl0VO4xfX?usp=sharing',
             img: '',
             group: 'sakip'
           },
-          {
-            name: 'FRA',
+          {supername:'FRA',
+            name: 'persentase, publikasi, statistik, data, target, singkil',
             url: 'https://drive.google.com/drive/folders/1yMeqiiHC--TkGxVzl-k3zZ-c7dJ82QpE?usp=sharing',
             img: '',
             group: 'sakip'
           },
-          {
-            name: 'PK',
+          {supername:'PK',
+            name: 'perjanjian kinerja, surat, nomor, ',
             url: 'https://drive.google.com/drive/folders/1BsoyNGonDE18U1f-WEg7jUcxDuA80viX?usp=sharing',
             img: '',
             group: 'sakip'
           },
-          {
-            name: 'Laporan Keuangan',
+          {supername:'Laporan Keuangan',
+            name: 'bmn, neraca, aset, GL, keuangan, pengelola',
             url: 'https://drive.google.com/drive/folders/13zxUaJ0E9OZYm0QeKMsrRqA_TH8ld8b_?usp=sharing',
             img: '',
             group: 'keuangan'
           },
-          {
+          {supername:'Laporan Perjadin',
             name: 'Laporan Perjadin',
             url: '',
             img: '',
             group: 'perjadin'
           },
-          {
-            name: 'SPD',
+          {supername:'SPD',
+            name: 'surat, perjalanan, dinas',
             url: 'https://drive.google.com/drive/folders/1pypBUl1vJ6EmQqOanQ_jG4Z6zrZkDabq?usp=sharing',
             img: '',
             group: 'perjadin'
           },
-          {
-            name: 'Surat Tugas',
+          {supername:'Surat Tugas',
+            name: 'Surat, tugas, ST, perjalanan, hari, tempat, acara',
             url: 'https://drive.google.com/drive/folders/1GBDVNXOT5a8pLcIp8B5X1B6WXYgVgmAz?usp=sharing',
             img: '',
             group: 'perjadin'
           },
-          {
-            name: 'Surat Masuk',
+          {supername:'Surat Masuk',
+            name: 'surat, masuk, keluar',
             url: 'https://drive.google.com/drive/folders/1Yz6SEN4hvucLqx943KOebdg_ZHqPuTHM?usp=sharing',
             img: '',
             group: 'surat'
           },
-          {
-            name: 'Surat Keluar',
+          {supername:'Surat Keluar',
+            name: 'keluar, perihal, rapat, undangan,',
             url: 'https://drive.google.com/drive/folders/1t2GBZF4KFtTTeK5DOVFM9sk33RvorCyR?usp=sharing',
             img: '',
             group: 'surat'
           },
-          {
-            name: 'Dokumen Lelang',
+          {supername:'Dokumen Lelang',
+            name: 'bast, sepeda motor, lelang, dokumen, bpkb, stnk, rumah dinas, kib',
             url: 'https://drive.google.com/drive/folders/1mDFpD-hAyvL-MgHnKBQFfxpj0sezIdiZ?usp=sharing',
             img: '',
             group: 'surat'
           },
-          {
-            name: 'Lainnya',
+          {supername:'Lainnya',
+            name: 'surat, keterangan,',
             url: 'https://drive.google.com/drive/folders/1esA1XCIycdfXkDs23IiYxBNvR7QLi0rI?usp=sharing',
             img: '',
             group: 'surat'
           },
-          {
+          {supername:'SOP',
             name: 'SOP',
-            url: '',
+            url: 'https://drive.google.com/drive/folders/1YQEVQXGwGoi-fAGbjSHPThSv5J92bdaU?usp=sharing',
             img: '',
             group: 'sop'
           },
-          {
-            name: 'Data Pegawaian',
-            url: '',
+          {supername:'Data Pegawai',
+            name: 'Data Pegawai',
+            url: 'https://drive.google.com/drive/folders/1O4pbyjR-FTGEh6g491cPgzTOkYXUS1T0?usp=sharing',
             img: '',
             group: 'kepegawaian'
           },
