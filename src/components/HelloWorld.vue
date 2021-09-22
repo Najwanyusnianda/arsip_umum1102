@@ -270,7 +270,7 @@
           },
           {supername:'Data Pegawai',
             name: 'data,pegawai',
-            url: 'https://drive.google.com/drive/folders/1O4pbyjR-FTGEh6g491cPgzTOkYXUS1T0?usp=sharing',
+            url: 'https://drive.google.com/drive/folders/1u66UGZTkIpwtv7DJT1nAPmMG-ULGBh8A?usp=sharing',
             img: '',
             group: 'kepegawaian'
           },
@@ -311,7 +311,7 @@
           this.search = null
       },
       redirectLink(url){
-         window.open(url, "_blank"); 
+         window.open(url, "_blank");
       }
 
     }
